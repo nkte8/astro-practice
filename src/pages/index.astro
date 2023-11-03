@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home Page";
+
+const show_dev = true;
+---
+<BaseLayout pageTitle={pageTitle}>
+{show_dev && <div>develop mode on</div>}
+
+</BaseLayout>

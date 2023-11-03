@@ -1,0 +1,16 @@
+---
+import './menu.css';
+
+const meun = [{
+  name: "home",
+  link: "/"
+},{
+  name: "blog",
+  link: "/blog"
+}
+]
+---
+
+<ul class="menu">
+{meun.map((item) => <a href={item.link}><li>{item.name}</li></a>)}
+</ul>
