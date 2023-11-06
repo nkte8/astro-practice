@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/PortfolioLayout.astro';
+const pageTitle = "404 Not Found.";
+import { Picture } from 'astro:assets';
+import Homebutton from '../components/homebutton/homebutton.astro';
+
+
+import img_404 from '../images/404.png';
+const show_dev = true;
+---
+<BaseLayout pageTitle={pageTitle}>
+    <Picture src={img_404} alt="" max-width="100%" />
+    <div class="contents"><Homebutton /></div>
+</BaseLayout>

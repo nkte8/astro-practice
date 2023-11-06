@@ -1,0 +1,21 @@
+html {
+    /* background: linear-gradient(#fff 50%, #e5e5e5 75%, #dfdfdf); */
+    background-color: #fff;
+    font-family: sans-serif;
+    height: 100%;
+}
+  
+body {
+    margin: 20px;
+    line-height: 1.5;
+}
+
+
+.contents {
+    text-align: center;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}
