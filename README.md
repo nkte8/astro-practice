@@ -12,14 +12,14 @@ MPAフレームワークであるAstroを採用してみる
 nodejsコンテナからcreate astro@latestを実行
 空ディレクトリかつウィザード形式
 ```
-docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -it node:lts /bin/bash
+docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 80:4321 -it node:lts /bin/bash
 npm create astro@latest
 ```
 
 # 実行方法
 
 ```
-docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 4321:4321 -it node:lts /bin/bash
+docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 80:4321 -it node:lts /bin/bash
 npm run dev 
 # または npm run astro dev --host
 ```
