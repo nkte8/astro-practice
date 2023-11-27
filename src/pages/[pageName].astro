@@ -1,0 +1,30 @@
+---
+const { pageName } = Astro.params;
+const { pageindex, pageTitle } = Astro.props;
+export interface staticPath {
+    params: {
+        pageName: string | undefined},
+    props: {
+        pageindex: number | undefined,
+        pageTitle: string | undefined,
+    }
+}
+export async function getStaticPaths() {
+    let staticPaths: staticPath[] = [];
+    for (let i = 0; i < 10; i++){
+        staticPaths.push({
+            params: {
+                pageName:  "post-" + String(i + 1).padStart(2, '0'),
+            },
+            props: {
+                pageindex: i,
+                pageTitle: "Post [" + String(i + 1).padStart(2, '0') + "]",
+            }    
+        })
+    }
+    return staticPaths;
+}
+---
+{pageName !== undefined && <div>pageName={pageName}</div>}<br />
+{pageindex !== undefined && <div>pageindex={pageindex}</div>}<br />
+{pageTitle !== undefined && <div>pageTitle={pageTitle}</div>}<br />
