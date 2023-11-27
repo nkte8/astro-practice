@@ -23,8 +23,8 @@ docker run --rm -v $PWD:/src -w /src -u `id -u`:`id -g` -p 80:4321 -it node:lts 
 npm run dev 
 # または npm run astro dev --host
 ```
-localhost:4321 へアクセスすると、ページを表示  
-dockerから実行する場合は `astro dev` コマンドに `--host` フラグが必要
+localhost:80 へアクセスすると、ページを表示  
+dockerから実行する場合は `astro dev` コマンドに `--host` フラグが必要(package.jsonを編集)
 
 
 相対リンクに対応:
